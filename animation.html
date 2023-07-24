@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        @keyframes headdingEffects {
+            from {
+                margin-left: 100%;
+            }
+
+            to {
+                margin-left: 0%;
+            }
+        }
+
+        h1 {
+            animation-name: headdingEffects;
+            background-color: black;
+            color: white;
+            animation-duration: 4s;
+
+        }
+
+        @keyframes ImgAnimation {
+            from {
+                margin-left: 100%;
+              
+            }
+
+            to {
+                margin-left: 0%;
+            }
+        }
+
+        img {
+            animation-name: imgAnimation;
+            animation-duration: 3s;
+            /* margin-left: 100%; */
+            /* overflow: hidden; */
+            border: 2px solid;
+            animation-iteration-count: infinite;
+        }
+
+        body {
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="Screenshot 2023-03-16 101724.jpg" alt="" height="100" width="100">
+    <h1>welocome to AbdeMustafa</h1>
+</body>
+
+</html>

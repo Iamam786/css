@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe | Drag & Drop Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="drag">
+        <div class="dragBox">
+            <div class="cross" ondragstart="drag(event)" draggable="true" id="cross1"></div>
+        </div>
+        <div class="dragBox">
+            <div class="cross" ondragstart="drag(event)" draggable="true" id="cross2"></div>
+        </div>
+        <div class="dragBox">
+            <div class="cross" ondragstart="drag(event)" draggable="true" id="cross3"></div>
+        </div>
+        <div class="dragBox">
+            <div class="cross" ondragstart="drag(event)" draggable="true" id="cross4"></div>
+        </div>
+        <div class="dragBox">
+            <div class="cross" ondragstart="drag(event)" draggable="true" id="cross5"></div>
+        </div>
+    </div>
+
+    <div class="board">
+        <div class="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+    </div>
+    <div class="drag">
+        <div class="dragBox">
+            <div class="circle" ondragstart="drag(event)" draggable="true" id="circle"></div>
+        </div>
+        <div class="dragBox">
+            <div class="circle" ondragstart="drag(event)" draggable="true" id="circle2"></div>
+        </div>
+        <div class="dragBox">
+            <div class="circle" ondragstart="drag(event)" draggable="true" id="circle3"></div>
+        </div>
+        <div class="dragBox">
+            <div class="circle" ondragstart="drag(event)" draggable="true" id="circle4"></div>
+        </div>
+        <div class="dragBox">
+            <div class="circle" ondragstart="drag(event)" draggable="true" id="circle5"></div>
+        </div>
+    </div>
+    <button class="reset" id="resetBtn" onclick="resetGame()">Reset Game</button>
+
+    <script>
+        function allowDrop(event) {
+            event.preventDefault();
+        }
+        function drag(event) {
+            event.dataTransfer.setData("text", event.target.id);
+        }
+        function drop(event) {
+            event.preventDefault();
+            let data = event.dataTransfer.getData("text");
+            event.target.appendChild(document.getElementById(data))
+        }
+        function resetGame() {
+            let dropBox = document.querySelectorAll('.dropBox');
+            for (let id = 0; id < dropBox.length; id++) {
+
+                dropBox[id].innerHTML = '';
+            }
+        }
+        // const resetButton = document.getElementById('resetBtn');
+        // resetButton.addEventListener('click', resetGame);
+    </script>
+</body>
+
+</html>

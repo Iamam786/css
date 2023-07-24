@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        section{
+            display: grid;
+            grid-template-columns: 3fr 6fr 3fr;
+            height: 400px;
+        }
+        header,footer{
+            background-color: tomato;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+       .container{
+        display: grid;
+        grid-template-columns: 3fr 6fr 3fr;
+
+       }
+       header{
+        grid-row: 1;
+        grid-column:3;
+       }
+       footer{
+        grid-row:3;
+        grid-column: 1;
+       }
+       section{
+        grid-row: 2;
+        grid-column: 1;
+       }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+
+        <header>
+            <h1>Amazon Shopping</h1>
+        </header>
+        <section>
+            <nav>
+                <ul>
+                    <li>Electronics</li>
+                    <li>Footwear</li>
+                    <li>Fashion</li>
+                </ul>
+            </nav>
+        </section>
+        <main>
+            <h3>shop | Online</h3>
+            <p>Special Offers on Electronics</p>
+        </main>
+        <aside>
+            50% OFF
+        </aside>
+        <footer>
+            <p>&copy; CopyRight 2021</p>
+        </footer>
+    </div>
+</body>
+
+</html>

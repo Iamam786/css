@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive</title>
+    <style>
+        ul {
+            list-style: none;
+
+        }
+
+        @media screen and (orientation:landscape) {
+            li {
+                color: red;
+                display: inline;
+                margin-right: 30px;
+            }
+        }
+        @media screen and (orientation:portrait) {
+            li {
+                color: red;
+                /* display: inline; */
+                margin-right: 30px;
+            }
+        }
+        @media screen and (width:200px) {
+            li {
+                color: red;
+                display: inline;
+                margin-right: 30px;
+                background-color: yellow;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>fb</li>
+            <li>twitter</li>
+            <li>insta</li>
+            <li>Youtube</li>
+        </ul>
+    </nav>
+</body>
+
+</html>
