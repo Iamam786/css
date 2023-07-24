@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter - Yahoo</title>
+    <style>
+#container{
+    width: 600px;
+    height: 600px;
+    border: 5px solid #000;
+    background: url("https://images.unsplash.com/photo-1542242476-5a3565835a38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cm9hZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1000&q=60") no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inner{
+    width: 400px;
+    height: 250px;
+    border-radius: 5px;
+    border: 2px solid #000;
+    /* background-color: rgba(255,255,255,0.4); */
+    /* backdrop-filter: blur(2px); */
+    /* backdrop-filter: brightness(100%); */
+    /* backdrop-filter: contrast(40%); */
+    /* backdrop-filter: hue-rotate(120deg); */
+    /* backdrop-filter: invert(60%); */
+    /* backdrop-filter: sepia(60%); */
+    /* backdrop-filter: saturate(60%); */
+    /* backdrop-filter: saturate(60%) blur(4px); */
+    backdrop-filter: blur(0px);
+    transition: backdrop-filter .3s;
+}
+.inner:hover{
+    backdrop-filter: saturate(60%) blur(4px);
+
+}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="inner">
+Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit corrupti voluptatum ipsa ea asperiores ullam atque, nisi qui earum, pariatur, eius reprehenderit soluta in id. Quisquam accusamus nostrum enim rerum.
+        </div>
+    </div>
+</body>
+</html>
