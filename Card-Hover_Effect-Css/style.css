@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #222;
+
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.container .card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container .card .content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 25px;
+    gap: 10px;
+    transition-delay: 0.5s;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.container .card:hover .content {
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+
+.container .card .content h2 {
+    color: var(--clr);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+
+.container .card .content p {
+    text-align: center;
+    color: #fff;
+}
+.container .card .content a {
+    color: #fff;
+    background: var(--clr);
+    padding: 10px 15px;
+    text-align: center;
+    width: auto;
+    text-decoration: none;
+ 
+}
+.container .card .imgBx,
+.container .card .textBx {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    align-items: flex-end;
+}
+
+.container .card .imgBx {
+    background: #fff;
+    height: 120px;
+    z-index: 1;
+    transform-origin: bottom;
+    align-items: flex-end;
+}
+
+
+.container .card:hover .imgBx {
+    transform: translateY(-100%) rotateX(90deg);
+}
+
+.container .card .textBx {
+    height: 280px;
+    background: var(--clr);
+    border-top: 8px solid #333;
+    transform-origin: top;
+    transition-delay: 0.5s;
+    /* align-items: flex-end; */
+}
+
+.container .card:hover .textBx {
+    transform: translateY(100%) rotateX(90deg);
+}
+
+.container .card .textBx h2 {
+    color: #222;
+    width: 121px;
+    border: #222 6px solid;
+    text-align: center;
+    border-bottom: 0;
+    background-color: #dbdbdb;
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+.container .card .imgBx::before {
+    content: '';
+    position: absolute;
+    bottom: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 144px;
+    height: 74px;
+    background: #fff;
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+    z-index: 1;
+}
+
+.container .card .imgBx i {
+    position: absolute;
+    /* position: relative; */
+    bottom: -44px;
+    /* top: 50px; */
+    z-index: 1000;
+}
+
+.container .card .textBx::before {
+    content: '';
+    position: absolute;
+    width: 160px;
+    height: 80px;
+    top: -8px;
+    border-bottom-left-radius: 85px;
+    border-bottom-right-radius: 85px;
+    background: #333;
+}
+
+
+
+
+/* Responsiveness  */
+
+@media screen and (max-width:799px) {
+    .container {
+        margin-top: 90px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .container {
+        flex-direction: column;
+    }
+}

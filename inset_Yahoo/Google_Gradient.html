@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Gradient</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+  width: 400px;
+  height: 400px;
+  background: #000;
+  margin:  0 auto;
+}
+.container h1{
+  
+    width: 400px;
+    height: 400px;
+    background: conic-gradient(from -47deg , red 0deg,red 90deg, blue 80deg,blue 180deg,green 180deg,green 270deg,yellow 270deg, yellow 0deg);
+    font-size: 30em;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>G</h1>
+    </div>
+</body>
+</html>

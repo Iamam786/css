@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+@property --a {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #25252b;
+}
+
+.box {
+    width: 400px;
+    height: 400px;
+    background: repeating-conic-gradient(from var(--a), #ff2770 0%, #ff2770 5%, transparent 5%, transparent 35%, #ff2770 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    border-radius: 20px;
+    animation: animate 4s linear infinite;
+}
+
+.box::before {
+    content: '';
+    background: repeating-conic-gradient(from var(--a), #ff2733 0%, #ff2733 5%, transparent 5%, transparent 35%, #ff2733 50%);
+    position: absolute;
+    animation: animate 4s linear infinite;
+    animation-delay: -1s;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.box::after {
+    content: '';
+    inset: 8px;
+    background: #2d2d39;
+    position: absolute;
+    border-radius: 20px;
+    border: 9px solid #25252b;
+}
+
+@keyframes animate {
+    0% {
+        --a: 0deg;
+    }
+
+    100% {
+        --a: 360deg;
+    }
+}
+
+.box h2 {
+    color: #fff;
+    font-weight: 600;
+}
+
+.box form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* width: 100%; */
+    position: relative;
+    z-index: 10000;
+}
+
+.box form input {
+    width: 100%;
+    padding: 11px 20px;
+    margin: 10px 47px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    outline: none;
+    color: #fff;
+}
+
+.box form input[type="submit"] {
+
+    background: transparent;
+    font-size: 1em;
+}
+
+.box form input[type="submit"]:hover {
+    background: #ff2770;
+}
+
+.box .group {
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+}
+
+.box .group:hover {
+
+    width: 73%;
+    border-radius: 5px;
+}
+
+.box .group a {
+    text-decoration: none;
+    color: #fff;
+
+}
+.box .group a:hover{
+    color: #ff0;
+}
