@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #3475ca;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.25;
+}
+
+.banner .content {
+    position: relative;
+    max-width: 750px;
+    text-align: center;
+}
+
+.banner .content h2 {
+    color: #fff;
+    font-size: 60px;
+}
+
+.banner .content p {
+    color: #fff;
+    font-size: 18px;
+}
+
+.banner header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+
+.banner header .logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.banner header .toggle {
+    position: relative;
+    width: 36px;
+    height: 33px;
+    background: url(cl.png);
+    cursor: pointer;
+    background-size: cover;
+}
+
+.about {
+    position: relative;
+    width: 100%;
+    display: flex;
+}
+
+.about .contentBx {
+    background: #162ceb;
+    padding: 100px;
+    width: 50%;
+}
+
+.heading {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.text {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.about .imgBx {
+    background: url(window.avif);
+    width: 50%;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}
+
+.services {
+    background: #12222d;
+    padding: 100px;
+    text-align: center;
+}
+
+.services .container {
+    width: 100%;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+
+.services .container .serviceBx {
+    position: relative;
+    background: #fff;
+    width: 350px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.services .container .serviceBx img {
+    max-width: 100%;
+    /* height: 100px; */
+}
+
+.services .container .serviceBx h2 {
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: .5em;
+}
+
+.technology {
+    background: #3f8ffc;
+    width: 100%;
+    padding: 100px;
+    padding-top: 300px;
+    margin-top: -300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.technology .contentBx {
+    max-width: 800px;
+}
+
+.technology .imgBx {
+    max-width: 250px;
+}
+
+.technology .imgBx img {
+    max-width: 100%;
+}
+
+.client {
+    background: #162c3b;
+    padding: 100px;
+    text-align: center;
+}
+
+.client .imgBx {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px;
+}
+
+.client .imgBx img {
+    max-width: 200px;
+    margin: 20px;
+    opacity: 0.2;
+    cursor: pointer;
+}
+
+.client .imgBx img:hover {
+    opacity: 1;
+}
+
+.testimonials {
+    position: relative;
+    padding: 100px;
+    background: #12222d;
+    text-align: center;
+}
+
+.testimonials .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.testimonials .container .contentBx {
+    background: #fff;
+    padding: 60px 50px;
+    width: 320px;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+
+}
+
+.testimonials .container .contentBx p {
+    font-style: italic;
+}
+
+.testimonials .container .contentBx h3 {
+    width: 100%;
+    text-align: end;
+    font-weight: 500;
+    color: #3f8ffc;
+}
+
+.contact {
+    padding: 100px;
+    background: #162c3b;
+    text-align: center;
+
+}
+
+.imgBx2 {
+    background: url(back2.jpeg);
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+}
+
+.redbg {
+    background: rgb(202 18 18) !important;
+    background-size: cover;
+    background-position: center;
+}
+
+.form .inputBx {
+    margin-bottom: 40px;
+}
+
+.form .inputBx input {
+    width: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.form .inputBx input::placeholder {
+    color: #fff;
+}
+
+.form .inputBx textarea {
+    width: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+    min-height: 150px;
+    border-bottom: 2px solid #fff;
+}
+
+.form .inputBx textarea::placeholder {
+    color: #fff;
+}
+
+.form .inputBx input[type="submit"] {
+    width: 150px;
+    background: #fff;
+    color: #111;
+}
+
+.footer {
+    background: #162c3b;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 41px;
+}
+
+.footer ul li {
+    list-style: none;
+    margin-top: 21px;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.footer ul li a img {
+    filter: invert(1);
+    margin-bottom: 20px;
+    width: 119px;
+    height: 31px;
+    object-fit: contain;
+}
+
+/* Responsiveness */
+
+@media (max-width:772px) {
+    .banner header {
+        padding: 40px;
+    }
+
+    .banner header .toggle {
+        background: url(toggle.png);
+    }
+
+    .banner .content {
+        padding: 0 20px;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about .contentBx {
+        width: 100%;
+    }
+
+    .about .imgBx {
+        width: 100%;
+        height: 434px;
+    }
+
+    .services .container {
+        margin-bottom: 74px;
+    }
+
+    .services .container .serviceBx {
+        width: 522px;
+        height: 250px;
+    }
+
+    .services .container .serviceBx img {
+        height: 100px;
+    }
+
+    .technology {
+        flex-direction: column;
+        gap: 70px;
+    }
+
+    .technology .imgBx {
+        max-width: 100%;
+    }
+
+    .technology .imgBx img {
+        height: 300px;
+        width: 565px;
+    }
+
+    .client .imgBx {
+        display: grid;
+        grid-column: 50% 50%;
+        grid-template-columns: 50% 50%;
+    }
+
+    .testimonials .container {
+        gap: 20px;
+    }
+
+    .testimonials .container .contentBx {
+        width: 100%;
+    }
+
+    .footer {
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .footer .text {
+        letter-spacing: 3px;
+
+    }
+}
+
+@media (max-width:480px) {
+    .banner header {
+        padding: 17px;
+    }
+
+    .banner .content {
+        padding: 5px;
+        align-self: center;
+    }
+
+    .about .contentBx {
+        /* width: 100%; */
+        padding: 16px;
+    }
+
+    .services {
+        padding: 5px;
+    }
+
+    .heading {
+        margin-top: 20px;
+    }
+
+    .text {
+        padding: 20px;
+    }
+
+    .services .container {
+        margin-bottom: 177px;
+    }
+
+    .services .container .serviceBx {
+        width: 281px;
+    }
+
+    .technology .heading {
+        margin-top: -58px;
+        font-size: 16px;
+        font-weight: bolder;
+    }
+
+    .technology {
+        padding: 13px;
+        padding-top: 223px;
+    }
+
+    .client {
+        padding: 5px;
+        padding-top: 100px;
+    }
+
+    .client .imgBx {
+        grid-template-columns: none;
+    }
+
+    .client .imgBx img {
+        opacity: 1;
+    }
+
+    .testimonials {
+        padding: 13px;
+
+    }
+
+    .testimonials .container .contentBx {
+        padding: 13px;
+    }
+
+    .contact {
+        padding: 10px;
+    }
+
+    .footer {
+        padding: 5px;
+        position: relative;
+        width: 100vw;
+        gap: 0;
+        overflow-x: hidden;
+    }
+
+    .footer ul li a img {
+        width: 31px;
+    }
+
+}
