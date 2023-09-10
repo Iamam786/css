@@ -339,6 +339,8 @@
 
     .banner header .toggle {
         background: url(toggle.png);
+        background-size: cover;
+        background-repeat: round;
     }
 
     .banner .content {
