@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 
 * {
@@ -121,4 +122,129 @@ body {
         text-shadow: -180px 0 0 var(--clr), 180px 0 0 var(--clr) ;
     }
 
+=======
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --clr: #03fe02;
+}
+
+body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    min-height: 100vh;
+    background: #000;
+}
+
+.container {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    top: 100px;
+    animation: animateColor 5s infinite;
+}
+
+@keyframes animateColor {
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+.container .cloud {
+    position: relative;
+    width: 300px;
+    /* height: 300px; */
+    z-index: 100;
+    filter: drop-shadow(0 0 35px var(--clr));
+}
+
+.container .cloud h2 {
+    position: absolute;
+    white-space: nowrap;
+    color: #000;
+    transform: translateX(-50%);
+    left: 50%;
+    z-index: 1000;
+    font-size: 2em;
+    padding: 0 10px;
+    text-transform: uppercase;
+    font-weight: 400;
+    border-radius: 10px;
+    background: var(--clr);
+}
+
+.container .cloud h2::before {
+    content: '';
+    position: absolute;
+    top: -115px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 100px;
+    width: 120%;
+    height: 100px;
+    background: var(--clr);
+}
+
+.container .cloud h2::after {
+    content: '';
+    position: absolute;
+    top: -150px;
+    left: 25px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: var(--clr);
+    box-shadow: 120px -30px 0 40px var(--clr);
+}
+.container .cloud .drop{
+    position: absolute;
+    top: 60px;
+    height: 20px;
+    line-height: 20px;
+    color: var(--clr);
+    transform-origin: bottom;
+    animation: animate 2s linear infinite;
+}
+@keyframes animate {
+    0%{
+        transform: translateY(0) scaleY(0);
+        transform-origin: top;
+    }
+    10%{
+        transform: translateY(0) scaleY(0.25);
+        transform-origin: top;
+
+    }
+    20%{
+        transform: translateY(0) scaleY(1);
+    }
+    70%{
+        transform: translateY(300px) scaleY(1);
+        transform-origin: bottom;
+    }
+    80%{
+        transform: translateY(800px) scaleY(1);
+        transform-origin: bottom;
+    }
+    100%{
+        transform: translateY(300px) scaleY(0);
+        transform-origin: bottom;
+        text-shadow: -180px 0 0 var(--clr), 180px 0 0 var(--clr) ;
+    }
+
+>>>>>>> 748e360f78c4fb453781a230e2f6cba7c24419af
 }
