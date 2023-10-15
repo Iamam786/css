@@ -1,0 +1,4 @@
+{
+    "inlineChat.mode": "livePreview",
+    "livePreview.defaultPreviewPath": "/index.html"
+}
