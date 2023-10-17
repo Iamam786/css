@@ -47,6 +47,7 @@ body {
 .container:hover .card {
     transform: rotate(calc(var(--i) * 5deg)) translate(calc(var(--i) * 120px), -50px);
     color: rgba(0, 0, 0, 0.25);
+    box-shadow: 0 15px 50px rgba(0,0,0,0.25);
 }
 
 .container:active .card {
