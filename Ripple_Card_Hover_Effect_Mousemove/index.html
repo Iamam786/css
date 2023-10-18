@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ripple Card Hover Effect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card" data-text="Arab"
+            style="--img:url(https://images.pexels.com/photos/18395846/pexels-photo-18395846/free-photo-of-minaret-of-sayyid-al-shuhadas-mosque-uhud-madina-saudi-arabia.jpeg?auto=compress&cs=tinysrgb&w=400)">
+        </div>
+        <div class="card" data-text="Palestine"
+            style="--img:url(https://images.pexels.com/photos/18235303/pexels-photo-18235303/free-photo-of-autumn-s-reflection.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load)">
+        </div>
+        <div class="card" data-text="Himms"
+            style="--img:url(https://images.pexels.com/photos/18235303/pexels-photo-18235303/free-photo-of-autumn-s-reflection.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load)">
+        </div>
+        <div class="card" data-text="Damishq"
+            style="--img:url(https://images.pexels.com/photos/18235303/pexels-photo-18235303/free-photo-of-autumn-s-reflection.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load)">
+        </div>
+    </div>
+
+
+    <script>
+        const cards = document.querySelectorAll('.card');
+        cards.forEach(card => {
+            card.onmousemove = function (e) {
+                const x = e.pageX - card.offsetLeft;
+                const y = e.pageY - card.offsetTop;
+                card.style.setProperty('--x', x + 'px')
+                card.style.setProperty('--y', x + 'px')
+
+            }
+        })
+    </script>
+</body>
+
+</html>
