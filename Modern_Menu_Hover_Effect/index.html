@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Menu Item Hover Effect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <ul>
+        <li><a href="#" data-text="Home"><img
+                    src="https://images.pexels.com/photos/10350131/pexels-photo-10350131.jpeg?auto=compress&cs=tinysrgb&w=400"
+                    alt="">Home</a></li>
+        <li><a href="#" data-text="About"><img
+                    src="https://images.pexels.com/photos/15483667/pexels-photo-15483667/free-photo-of-flag-of-palestine.jpeg?auto=compress&cs=tinysrgb&w=400"
+                    alt="">About</a></li>
+        <li><a href="#" data-text="Services"><img
+                    src="https://images.pexels.com/photos/8343522/pexels-photo-8343522.jpeg?auto=compress&cs=tinysrgb&w=400"
+                    alt="">Services</a></li>
+        <li><a href="#" data-text="Portfolio"><img
+                    src="https://images.pexels.com/photos/5484805/pexels-photo-5484805.jpeg?auto=compress&cs=tinysrgb&w=400"
+                    alt="">Portfolio</a></li>
+        <li><a href="#" data-text="Team"><img
+                    src="https://images.pexels.com/photos/7918088/pexels-photo-7918088.jpeg?auto=compress&cs=tinysrgb&w=400"
+                    alt="">Team</a></li>
+        <li><a href="#" data-text="Contact"><img
+                    src="https://images.pexels.com/photos/3805526/pexels-photo-3805526.jpeg?auto=compress&cs=tinysrgb&w=400"
+                    alt="">Contact</a></li>
+
+        <div class="cursor"></div>
+    </ul>
+
+
+    <script>
+        let pos = document.documentElement;
+        pos.addEventListener('mousemove', (e) => {
+            pos.style.setProperty('--x', e.clientX + 'px')
+            pos.style.setProperty('--y', e.clientY + 'px')
+        })
+    </script>
+</body>
+
+</html>
