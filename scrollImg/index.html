@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Up Down Image</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Scroll Down</h1>
+    <div class="container">
+        <img src="https://images.pexels.com/photos/18614182/pexels-photo-18614182/free-photo-of-a-small-church-in-the-middle-of-a-field.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+            alt="">
+        <img src="https://images.pexels.com/photos/20165766/pexels-photo-20165766/free-photo-of-winter-in-porto.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+            alt="">
+        <img src="https://images.pexels.com/photos/18973615/pexels-photo-18973615/free-photo-of-road-in-mountains.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+            alt="">
+        <img src="https://images.pexels.com/photos/20446158/pexels-photo-20446158/free-photo-of-village-of-santa-maddalena-in-the-italian-dolomites.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+            alt="">
+        <img src="https://images.pexels.com/photos/18964185/pexels-photo-18964185/free-photo-of-pink-flowers-and-green-leaves-of-starfruit-tree.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+            alt="">
+        <img src="https://images.pexels.com/photos/8113965/pexels-photo-8113965.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+            alt="">
+    </div>
+    <h1>Scroll up</h1>
+
+
+    <script>
+        let options = {
+            threshold: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
+        }
+        let callback = (entries, observer) => {
+            entries.forEach(entry => {
+                entry.target.style.scale = entry.intersectionRatio;
+            });
+        }
+        let observer = new IntersectionObserver(callback, options)
+        for (const target of document.querySelectorAll('img')) {
+            observer.observe(target)
+
+        }
+    </script>
+
+</body>
+
+</html>
