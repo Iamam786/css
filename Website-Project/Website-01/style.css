@@ -421,9 +421,7 @@ section {
         filter: invert(1);
     }
 
-    .banner {
-        padding: 50px 0;
-    }
+
 
     header.sticky {
         background: #fff;
@@ -457,6 +455,10 @@ section {
         font-size: 1.6em;
         font-weight: 300;
 
+    }
+
+    .banner {
+        padding: 50px 0;
     }
 
     .banner .content h2 {
@@ -563,37 +565,45 @@ section {
 
 /* Mobile Responsivness */
 @media (max-width:480px) {
-    header, header.sticky {
+
+    header,
+    header.sticky {
         padding: 10px 20px;
         width: 100vw;
     }
 
-   
+
     .banner {
         padding: 5px;
     }
+
     .banner .content h2 {
         font-size: 4em;
-    
+
         padding-top: 50px;
     }
+
     .btn {
         margin-top: 50px;
     }
+
     .row .col50 {
         width: 100%;
         margin: 0px;
         margin-bottom: 32px;
     }
+
     .menu .content {
         display: flex;
         flex-wrap: wrap;
         margin-top: 40px;
         width: 100%;
     }
-.menu .title p{
-    text-align: center;
-}
+
+    .menu .title p {
+        text-align: center;
+    }
+
     .menu .content .box {
         width: 480px;
         margin-bottom: 5px;
